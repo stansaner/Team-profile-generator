@@ -1,0 +1,33 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "HTML generator for an engineering team employees summaries with input taken via node.js command line.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stansaner/Team-profile-generator.git"
+  },
+  "keywords": [
+    "html",
+    "node.js",
+    "test"
+  ],
+  "author": "Stan Saner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stansaner/Team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/stansaner/Team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
+}
