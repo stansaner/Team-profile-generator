@@ -20,14 +20,16 @@ const render = require("./src/page-template.js");
 
 function addEngineer() {
     console.log('Adding an engineer');
-    return;
+    // Call main menu again to show the menu after adding an engineer
+    showMainMenu();
 }
 
 // Adding an Intern
 
 function addIntern() {
     console.log('Adding an Intern');
-    return;
+    // Call main menu again to show the menu after adding an intern
+    showMainMenu();
 }
 
 // This is the menu prompting for additional team  members in a loop until
@@ -57,19 +59,15 @@ function showMainMenu() {
       // Call a function based on their choice
       switch (choice.option) {
         case 'engineer':
-          addEngineer()
-            // Call main menu again to show the menu after adding san engineer
-            .then(showMainMenu);
-          break;
+            addEngineer();
+            break;
         case 'intern':
-          addIntern()
-            // Call main menu again to show the menu after displaying todos
-            .then(showMainMenu);
-          break;
+            addIntern();
+            break;
         default:
-          console.log('Thanks for using the Team Profile App!');
-          // Call render from here
-          process.exit();
+            console.log('Thanks for using the Team Profile App!');
+            // Call render from here
+            process.exit();
       }
     })
   }
@@ -98,7 +96,7 @@ function generateManager() {
             message: 'Please enter Manager\'s office number:'
         }
     ]).then(answers => {
-        console.log(answers);
+        // console.log(answers);
         const manager = new Manager(answers.name, answers.employeeID, answers.email, answers.officeNumber);
         console.log(manager);
         showMainMenu();
