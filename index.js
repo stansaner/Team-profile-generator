@@ -10,6 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+var employees = [];
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 // How to use inquirer
@@ -42,6 +43,7 @@ function addEngineer() {
         const engineer = new Engineer(answers.name, answers.employeeID, answers.email, answers.github);
         console.log(engineer);
         // Add the object to the employees array
+        employees.push(engineer);
         // Call main menu again to show the menu after adding an engineer
         showMainMenu();
     })
@@ -72,6 +74,7 @@ function addIntern() {
         const intern = new Intern(answers.name, answers.employeeID, answers.email, answers.school);
         console.log(intern);
         // Add the object to the employees array
+        employees.push(intern);
         // Call main menu again to show the menu after adding an intern
         showMainMenu();
     })
@@ -111,6 +114,7 @@ function showMainMenu() {
             break;
         default:
             console.log('Thanks for using the Team Profile App!');
+            console.log(employees);
             // Call render from here
             process.exit();
       }
@@ -144,6 +148,8 @@ function generateManager() {
         // console.log(answers);
         const manager = new Manager(answers.name, answers.employeeID, answers.email, answers.officeNumber);
         console.log(manager);
+        // Add the manager to the employees array
+        employees.push(manager);
         showMainMenu();
     });
  }
