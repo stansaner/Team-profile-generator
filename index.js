@@ -20,16 +20,61 @@ const render = require("./src/page-template.js");
 
 function addEngineer() {
     console.log('Adding an engineer');
-    // Call main menu again to show the menu after adding an engineer
-    showMainMenu();
+
+    inquirer.prompt([
+        {
+            name: 'name',
+            message: 'Please enter the engineer\'s name:'
+        },
+        {
+            name: 'employeeID',
+            message: 'Please enter the engineer\'s employee ID:'
+        },
+        {
+            name: 'email',
+            message:'Please enter the engineer\'s email address:'
+        },
+        {
+            name: 'github',
+            message: 'Please enter the engineer\'s Github username:'
+        }
+    ]).then(answers => {
+        const engineer = new Engineer(answers.name, answers.employeeID, answers.email, answers.github);
+        console.log(engineer);
+        // Add the object to the employees array
+        // Call main menu again to show the menu after adding an engineer
+        showMainMenu();
+    })
 }
 
 // Adding an Intern
 
 function addIntern() {
     console.log('Adding an Intern');
-    // Call main menu again to show the menu after adding an intern
-    showMainMenu();
+    inquirer.prompt([
+        {
+            name: 'name',
+            message: 'Please enter the intern\'s name:'
+        },
+        {
+            name: 'employeeID',
+            message: 'Please enter the intern\'s ID:'
+        },
+        {
+            name: 'email',
+            message:'Please enter the intern\'s email address:'
+        },
+        {
+            name: 'school',
+            message: 'Please enter the intern\'s school:'
+        }
+    ]).then(answers => {
+        const intern = new Intern(answers.name, answers.employeeID, answers.email, answers.school);
+        console.log(intern);
+        // Add the object to the employees array
+        // Call main menu again to show the menu after adding an intern
+        showMainMenu();
+    })
 }
 
 // This is the menu prompting for additional team  members in a loop until
