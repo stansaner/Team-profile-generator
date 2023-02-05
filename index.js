@@ -115,8 +115,31 @@ function showMainMenu() {
         default:
             console.log('Thanks for using the Team Profile App!');
             console.log(employees);
-            // Call render from here
-            process.exit();
+            // Call render from here and write the output from render()
+            // to the output file 'team.html' on the output ditrectory
+            // First test whether the directory exists:
+
+            if (!fs.existsSync(OUTPUT_DIR)) {
+                fs.mkdirSync(OUTPUT_DIR);
+            }
+
+            // Now write the file
+
+            fs.writeFile(`${outputPath}`, render(employees), (err) => {
+                if (err) {
+                   console.log(err);
+                }
+                else {
+                    console.log(`Output html file successfully created in ${outputPath}`);
+                }
+                process.exit();
+            });
+
+            // return fs.writeFile(`${outputPath}`, render(employees))
+            // .then(() => {
+            //     console.log(`Output html file successfully created in ${outputPath}`);
+            //     process.exit();
+            // })
       }
     })
   }
