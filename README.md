@@ -68,19 +68,23 @@ This is then followed by a menu with the option to:
 - Add an intern
 - Finish adding team members
 
-When a user selects the engineer option then a user is prompted to enter the following and then the user is taken back to the menu:
+When a user selects the engineer option then a user is prompted to enter the following:
 - Engineer's Name
 - ID
 - Email
 - GitHub username
 
-When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
+and then the user is taken back to the menu.
+
+When a user selects the intern option then a user is prompted to enter the following:
 - Intern's name
 - ID
 - Email
 - School
 
-When a user decides to finish building their team then they exit the application, and the HTML is generated.
+and then the user is taken back to the menu.
+
+When a user decides to finish building their team the the HTML file is generated and the application exits.
 
 The resulting webpage is placed in the **output** directory (the directory is created if it does not exist already) in the file named **team.html**.
 
