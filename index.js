@@ -41,7 +41,7 @@ function addEngineer() {
         }
     ]).then(answers => {
         const engineer = new Engineer(answers.name, answers.employeeID, answers.email, answers.github);
-        console.log(engineer);
+        // console.log(engineer);
         // Add the object to the employees array
         employees.push(engineer);
         // Call main menu again to show the menu after adding an engineer
@@ -72,7 +72,7 @@ function addIntern() {
         }
     ]).then(answers => {
         const intern = new Intern(answers.name, answers.employeeID, answers.email, answers.school);
-        console.log(intern);
+        // console.log(intern);
         // Add the object to the employees array
         employees.push(intern);
         // Call main menu again to show the menu after adding an intern
@@ -180,7 +180,7 @@ function generateManager() {
     ]).then(answers => {
         // console.log(answers);
         const manager = new Manager(answers.name, answers.employeeID, answers.email, answers.officeNumber);
-        console.log(manager);
+        // console.log(manager);
         // Add the manager to the employees array
         employees.push(manager);
         showMainMenu();
