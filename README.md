@@ -84,11 +84,11 @@ When a user selects the intern option then a user is prompted to enter the follo
 
 and then the user is taken back to the menu.
 
-When a user decides to finish building their team the the HTML file is generated and the application exits.
+When a user decides to finish building their team then the HTML file is generated and the application exits.
 
 The resulting webpage is placed in the **output** directory (the directory is created if it does not exist already) in the file named **team.html**.
 
-In addition, a template CSS style file **style.css* is also copied to the output directory. The user is free to modify the styles to his liking or just leave the styling in the template form.
+In addition, a template CSS style file **style.css** is also copied to the output directory. The user is free to modify the styles to his liking or just leave the styling in the template form.
 
 
 ## Screenshot
