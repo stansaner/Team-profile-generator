@@ -123,6 +123,16 @@ function showMainMenu() {
                 fs.mkdirSync(OUTPUT_DIR);
             }
 
+            // Copy the template style.css file to the output directory
+
+            fs.copyFile('style.css', `${OUTPUT_DIR}/style.css`, (err) => {
+                if (err) {
+                    console.log("Copy style.css:", err);
+                } else {
+                    console.log(`Copied style.css to ${OUTPUT_DIR}`);
+                }
+            });
+
             // Now write the file
 
             fs.writeFile(`${outputPath}`, render(employees), (err) => {

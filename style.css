@@ -1,0 +1,16 @@
+.team-heading {
+  background-color: #ADD0B3;
+}
+
+.card {
+  margin: 20px;
+  box-shadow: 10px 10px 10px 0px #aeaeae;
+  /* For Apple Safari shadow support */
+  -webkit-box-shadow: 10px 10px 10px 0px #aeaeae;
+  /* For Mozilla Firefox shadow support */
+  -moz-box-shadow: 10px 10px 10px 0px #aeaeae;
+}
+
+.card-header {
+  background-color: #e5e5e5;
+}
